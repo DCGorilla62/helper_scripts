@@ -77,7 +77,7 @@ plt.xlim(0, None)
 #plt.ylim(0, None)
 
 plt.savefig("DAC_to_ADC.png", dpi=600)
-plt.show()
+#plt.show()
 
     
     
@@ -100,5 +100,5 @@ plt.show()
 #     # Extract data from the rows
 #     DAC = df.iloc[:, 0] #
 
-plt.savefig("DAC_to_ADC_part2.png", dpi=600)
-plt.show()
+#plt.savefig("DAC_to_ADC_part2.png", dpi=600)
+#plt.show()
