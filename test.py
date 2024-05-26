@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the csv file
-data = pd.read_csv("SSOut_DAC_ADC.csv", header=None)
+data = pd.read_csv("Book1.csv", header=None)
 
 print(data)
 
