@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+Fit parameters for DCT 0:Slope: 0.9932382502089294Intercept: 29.448957615061502
+Fit parameters for DCT 1:Slope: 0.9951701581128406Intercept: 28.27788949507652
+Fit parameters for DCT 2:Slope: 0.9947238338685189Intercept: 31.434268873569547
+Fit parameters for DCT 3:Slope: 0.9942811159933339Intercept: 34.0796884962569
+Fit parameters for DCT 4:Slope: 0.9929181488843822Intercept: 33.72174554036139
+Fit parameters for DCT 5:Slope: 0.992668059206003Intercept: 38.38176807295508
+Fit parameters for DCT 6:Slope: 0.995485643284893Intercept: 28.419130057208484
+Fit parameters for HV Drift:Slope: 0.9979139318367388Intercept: 29.039561148150284
+Fit parameters for HV Gaiin:Slope: 0.9950901928878559Intercept: 36.22090381380477
+Fit parameters for HV Enable:Slope: 0.9951618875062876Intercept: 39.103023868390935
+Fit parameters for DCT Vac:Slope: 0.9964270498842601Intercept: 30.358195401732537
+Fit parameters for B Field State:Slope: 0.9956718761870971Intercept: 30.153168267410326
+Fit parameters for Bottom Stack:Slope: 0.9949701729229963Intercept: 28.98564448701351
+Fit parameters for SFC V:Slope: 0.9947499439810665Intercept: 33.65492024153805
+Fit parameters for HSK V:Slope: 0.9962991920771442Intercept: 28.846755277558643
+Fit parameters for RICH Temp N:Slope: 0.9927051326807255Intercept: 26.369101783273873
+Fit parameters for RICH Temp S:Slope: 0.9938696052324093Intercept: 28.030269698707425
+Fit parameters for ABS Air:Slope: 0.9962874112712985Intercept: 34.382557146522835
+=======
+Fit parameters for DCT 0:Slope: 0.9932382502089294Intercept: 29.448957615061502Fit parameters for DCT 1:Slope: 0.9951701581128406Intercept: 28.27788949507652Fit parameters for DCT 2:Slope: 0.9947238338685189Intercept: 31.434268873569547Fit parameters for DCT 3:Slope: 0.9942811159933339Intercept: 34.0796884962569Fit parameters for DCT 4:Slope: 0.9929181488843822Intercept: 33.72174554036139Fit parameters for DCT 5:Slope: 0.992668059206003Intercept: 38.38176807295508Fit parameters for DCT 6:Slope: 0.995485643284893Intercept: 28.419130057208484Fit parameters for HV Drift:Slope: 0.9979139318367388Intercept: 29.039561148150284Fit parameters for HV Gaiin:Slope: 0.9950901928878559Intercept: 36.22090381380477Fit parameters for HV Enable:Slope: 0.9951618875062876Intercept: 39.103023868390935Fit parameters for DCT Vac:Slope: 0.9964270498842601Intercept: 30.358195401732537Fit parameters for B Field State:Slope: 0.9956718761870971Intercept: 30.153168267410326Fit parameters for Bottom Stack:Slope: 0.9949701729229963Intercept: 28.98564448701351Fit parameters for SFC V:Slope: 0.9947499439810665Intercept: 33.65492024153805Fit parameters for HSK V:Slope: 0.9962991920771442Intercept: 28.846755277558643Fit parameters for RICH Temp N:Slope: 0.9927051326807255Intercept: 26.369101783273873Fit parameters for RICH Temp S:Slope: 0.9938696052324093Intercept: 28.030269698707425Fit parameters for ABS Air:Slope: 0.9962874112712985Intercept: 34.382557146522835
+>>>>>>> origin
