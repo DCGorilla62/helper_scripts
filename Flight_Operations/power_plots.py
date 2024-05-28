@@ -1,6 +1,6 @@
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+from datetime import datetime, time
 
 # Read the csv files
 west = pd.read_csv("830_1300_UTC/west_power.csv")
@@ -8,6 +8,47 @@ north = pd.read_csv("830_1300_UTC/north_power.csv")
 east = pd.read_csv("830_1300_UTC/east_power.csv")
 south = pd.read_csv("830_1300_UTC/south_power.csv")
 
+
+# # function to convert time format
+# def convert_to_time(df):
+#     df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S') # data I get i sonly for last 6 hours, eliminateing the day
+
+#     return  df[df['Date']]
+
+
+# # convert date to time
+# west = convert_to_time(west)
+# north = convert_to_time(north)
+# east = convert_to_time(east)
+# south = convert_to_time(south)
+
+# xmin
+#xmin = '2024-05-28 13:00:00'
+
+
+
+def filter_time_range(df, start_time, end_time):
+    # Convert datetime column to datetime object with correct format
+    df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S')
+    
+
+    # Extract the time part only
+    df['time'] = df['Date'].dt.time
+
+    # Filter the dataframe for the specified time range
+    df_filtered = df[(df['time'] >= start_time) & (df['time'] <= end_time)]
+    
+    return df_filtered
+
+
+# Define the time range
+start_time = time(11, 0, 0)
+end_time = time(13, 0, 0)
+
+west = filter_time_range(west, start_time, end_time)
+north = filter_time_range(north, start_time, end_time)
+east = filter_time_range(east, start_time, end_time)
+south = filter_time_range(south, start_time, end_time)
 
 # setting figure
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -23,8 +64,21 @@ ax.set_title('8:30 to 13:00 UTC')
 ax.set_xlabel('Date')
 ax.set_ylabel('Power')
 ax.grid(True)
+#plt.xlim(left=xmin)
 plt.legend()
 plt.tight_layout()
 
 plt.savefig("830_1300_UTC_Power.png", dpi=600)
 plt.show()
+
+
+# def filter_last_2_hours(df):
+#     # Convert date column to datetime
+#     df['date'] = pd.to_datetime(df['date'], format='%m/%d/%y %H:%M')
+    
+#     # Get the current datetime
+#     now = pd.to_datetime('now')
+    
+#     # Filter the dataframe for the last 2 hours
+#     last_2_hours = now - timedelta(hours=2)
+#     return df[df['date'] >= last_2_hours]
