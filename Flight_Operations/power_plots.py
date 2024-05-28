@@ -2,11 +2,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime, time
 
+
+data_dir = "1030_1530_UTC"
+
 # Read the csv files
-west = pd.read_csv("830_1300_UTC/west_power.csv")
-north = pd.read_csv("830_1300_UTC/north_power.csv")
-east = pd.read_csv("830_1300_UTC/east_power.csv")
-south = pd.read_csv("830_1300_UTC/south_power.csv")
+west = pd.read_csv(data_dir + "/west_power.csv")
+north = pd.read_csv(data_dir + "/north_power.csv")
+east = pd.read_csv(data_dir + "/east_power.csv")
+south = pd.read_csv(data_dir + "/south_power.csv")
 
 
 # # function to convert time format
@@ -42,8 +45,8 @@ def filter_time_range(df, start_time, end_time):
 
 
 # Define the time range
-start_time = time(11, 0, 0)
-end_time = time(13, 0, 0)
+start_time = time(14, 0, 0)
+end_time = time(15, 30, 0)
 
 west = filter_time_range(west, start_time, end_time)
 north = filter_time_range(north, start_time, end_time)
@@ -60,7 +63,7 @@ east.plot(x='Date', y='Tot Power', ax = ax, label='east')
 south.plot(x='Date', y='Tot Power', ax = ax, label='south')
 
 # Customize the plot
-ax.set_title('8:30 to 13:00 UTC')
+ax.set_title(data_dir)
 ax.set_xlabel('Date')
 ax.set_ylabel('Power')
 ax.grid(True)
@@ -68,7 +71,7 @@ ax.grid(True)
 plt.legend()
 plt.tight_layout()
 
-plt.savefig("830_1300_UTC_Power.png", dpi=600)
+plt.savefig("power_" + data_dir + ".png", dpi=600)
 plt.show()
 
 
