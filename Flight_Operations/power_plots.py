@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 from datetime import datetime, time
 
 
-data_dir = "1030_1530_UTC"
+
+data_dir = "1430_1930_UTC"
+
 
 # Read the csv files
 west = pd.read_csv(data_dir + "/west_power.csv")
