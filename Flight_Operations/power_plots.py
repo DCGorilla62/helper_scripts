@@ -47,8 +47,8 @@ def filter_time_range(df, start_time, end_time):
 
 
 # Define the time range
-start_time = time(14, 0, 0)
-end_time = time(15, 30, 0)
+start_time = time(18, 0, 0)
+end_time = time(19, 30, 0)
 
 west = filter_time_range(west, start_time, end_time)
 north = filter_time_range(north, start_time, end_time)
