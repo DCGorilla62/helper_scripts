@@ -4,7 +4,7 @@ from datetime import datetime, time
 
 
 
-data_dir = "830_1430_UTC_05-29"
+data_dir = "0900_1500_UTC_05-29"
 
 
 # Read the csv files
@@ -47,8 +47,8 @@ def filter_time_range(df, start_time, end_time):
 
 
 # Define the time range
-start_time = time(13, 0, 0)
-end_time = time(14, 30, 0)
+start_time = time(13,30, 0)
+end_time = time(15, 0, 0)
 
 west = filter_time_range(west, start_time, end_time)
 north = filter_time_range(north, start_time, end_time)
