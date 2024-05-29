@@ -45,10 +45,32 @@ def filter_time_range(df, start_time, end_time):
     
     return df_filtered
 
+    # # Get the current datetime
+    # now = pd.to_datetime('now')
+    
+    # # Filter the dataframe for the last 2 hours
+    # last_2_hours = now - timedelta(hours=2)
+    # df_filtered = df[df['datetime'] >= last_2_hours]
+    
+    # # Extract the time part only
+    # df_filtered['time'] = df_filtered['datetime'].dt.time
+    # return df_filtered
+
+def set_time_range(delta):
+
+    # Get the current time
+    start_time = pd.to_datetime('now')
+
+    # Filter for time delta period you want
+    end_time = start_time - timedelta(delta)
+    
+    return (start_time, end_time)
+
+start_time, end_time = set_time_range(2)
 
 # Define the time range
-start_time = time(13,30, 0)
-end_time = time(15, 0, 0)
+# start_time = time(13,30, 0)
+# end_time = time(15, 0, 0)
 
 west = filter_time_range(west, start_time, end_time)
 north = filter_time_range(north, start_time, end_time)
