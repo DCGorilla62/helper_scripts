@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, time
 # Functions to filter out a time range
 def filter_time_range(df, start_time, end_time):
     # Convert datetime column to datetime object with correct format
-    df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S')
+    df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S').dt.tz_localize('UTC')
     
 
     # Extract the time part only
@@ -20,12 +20,12 @@ def filter_time_range(df, start_time, end_time):
 def set_time_range(delta):
 
     # Get the current time
-    end_time = pd.Timestamp.now()
-
+    end_time = pd.Timestamp.now(tz='UTC')
+    
     # Filter for time delta period you want
     start_time = end_time - timedelta(hours=delta)
     
-    return start_time, end_time
+    return end_time, start_time
 
 # Setting the parent directory of the directory holding the csv files
 data_dir = "2000_0130_UTC_05-30"
@@ -37,7 +37,8 @@ east = pd.read_csv(data_dir + "/east_power.csv")
 south = pd.read_csv(data_dir + "/south_power.csv")
 
 
-start_time, end_time = set_time_range(2)
+#print(pd.Timestamp.now())
+end_time, start_time = set_time_range(2)
 
 # Define the time range
 # start_time = time(13,30, 0)
