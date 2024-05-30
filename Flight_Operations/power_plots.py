@@ -28,7 +28,7 @@ def set_time_range(delta):
     return start_time, end_time
 
 # Setting the parent directory of the directory holding the csv files
-data_dir = "0900_1500_UTC_05-29"
+data_dir = "2000_0130_UTC_05-30"
 
 # Read the csv files
 west = pd.read_csv(data_dir + "/west_power.csv")
